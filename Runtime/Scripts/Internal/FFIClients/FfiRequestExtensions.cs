@@ -143,9 +143,6 @@ namespace LiveKit.Internal.FFIClients
                 case TextStreamWriterCloseRequest textStreamWriterCloseRequest:
                     ffiRequest.TextStreamClose = textStreamWriterCloseRequest;
                     break;
-                case SetRemoteTrackPublicationQualityRequest setRemoteTrackPublicationQualityRequest:
-                    ffiRequest.SetRemoteTrackPublicationQuality = setRemoteTrackPublicationQualityRequest;
-                    break;
                 default:
                     throw new Exception($"Unknown request type: {request?.GetType().FullName ?? "null"}");
             }
